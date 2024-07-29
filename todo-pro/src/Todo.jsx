@@ -28,7 +28,7 @@ function Todo() {
     const [remaTask, setRemaTask] = useState(0);
 
     const allTasks = [
-        { ProductName: "Buy Laptop", complete: true },
+        { ProductName: "Buy Laptop", complete: true }, s
         { ProductName: "Buy iPhone", complete: false },
         { ProductName: "Buy Bike", complete: true }
     ];
