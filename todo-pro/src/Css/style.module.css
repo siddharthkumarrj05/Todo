@@ -1,0 +1,256 @@
+.todomaindiv {
+    width: 500px;
+    box-shadow: 0px 0px 15px 0px #e6e6e6;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 20px 10px;
+    margin-top: 100px !important;
+  }
+  .todomaindiv form input:focus-visible {
+    outline: none;
+  }
+  .todomaindiv ul {
+    list-style: none;
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+  }
+  .todomaindiv ul li {
+    margin-top: 20px;
+    font-size: 20px;
+    background: #dfdfdf3d;
+    color: #000 !important;
+    padding: 5px 0px 5px 10px;
+    border-radius: 7px;
+    box-shadow: 0px 7px 7px 0px #d6d6d69e;
+  }
+  .todomaindiv h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: #ee563e;
+  }
+  .todomaindiv h6 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ee563e;
+  }
+  .todomaindiv .icondelete {
+    float: inline-end;
+    gap: 15px;
+    display: flex;
+    color: black;
+    padding-right: 20px;
+  }
+  .todomaindiv .icondelete i {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .todomaindiv span i:hover {
+    color: #ee563e;
+  }
+  input[type="checkbox"] {
+    width: 0px;
+    height: 0px;
+    margin: 10px;
+    margin-top: 0;
+  }
+  input[type="checkbox"]:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    top: 2px;
+    left: -10px;
+    position: relative;
+    background-color: #ffffff;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    box-shadow: 0px 0px 0px 2px #cfcfcf;
+  }
+  input[type="checkbox"]:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    top: 2px;
+    left: -10px;
+    position: relative;
+    background-color: #ee563e;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+    box-shadow: 0px 0px 0px 2px #ee563e;
+  }
+  
+  .todoparentform {
+    position: relative;
+    transition: all 1s;
+    width: 80px;
+    height: 50px;
+    background: #f4f4f4;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 5px;
+    border-radius: 50px;
+  }
+  
+  .todoparentform input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 30px;
+    outline: 0;
+    border: 0px solid;
+    box-shadow: 0px 5px 10px 0px #dddddd;
+    display: none;
+    font-size: 1em;
+    border-radius: 50px;
+    padding: 0 20px;
+    background-color: #f7f7f7;
+    border: 1px solid red;
+  }
+  
+  .todoparentform .addbtn {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50px;
+    text-align: center;
+    transition: all 1s;
+    color: #fff;
+    background-color: #ee563e;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .todoparentform .addbtn:focus {
+    box-shadow: none !important;
+  }
+  
+  .todoparentform:hover,
+  .todoparentform:valid {
+    width: 80%;
+    cursor: pointer;
+  }
+  
+  .todoparentform:hover input,
+  .todoparentform:valid input {
+    display: block;
+  }
+  
+  .todoparentform:hover .addbtn,
+  .todoparentform:valid .addbtn {
+    background-color: #ee563e;
+    color: white;
+  }
+  
+  .threeTask {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .totale {
+    background: #ee563e;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  .Completed {
+    background: #ee563e;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+  }
+  .Remaining {
+    background: #ee563e;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  /* mobile Responsive */
+  @media (max-width: 480px) {
+    .todomaindiv {
+      border: 30px solid #e7edf0;
+    }
+    .threeTask {
+      display: ruby-text;
+    }
+    .Remaining,
+    .Completed,
+    .totale {
+      font-size: 16px;
+      padding: 10px 10px;
+    }
+  }
+  
+  /* Laptop Responsive */
+  @media (max-width: 767px) {
+    .todomaindiv {
+      padding: 15px;
+    }
+    .threeTask {
+      display: ruby-text;
+    }
+    .todomaindiv h3 {
+      font-size: 20px;
+    }
+    .todomaindiv .task-list li {
+      font-size: 16px;
+      padding: 8px;
+    }
+    .todomaindiv .threeTask {
+      flex-direction: column;
+      align-items: center;
+    }
+    .todomaindiv .threeTask span {
+      margin-top: 10px;
+    }
+  }
+
+
+
+/* Light Theme */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --background-color: #000000;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* App.css */
+
+button {
+  transition: color 0.3s ease;
+}
+
+[data-theme='dark'] button {
+  color: #ffffff;
+}
+
+[data-theme='light'] button {
+  color: #000000;
+}
+
